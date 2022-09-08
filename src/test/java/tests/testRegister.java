@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 //import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -72,14 +73,14 @@ public class testRegister {
 			registerButton.click();
 			System.out.println("- Mygtukas [Prisijungti] paspaustas.");
 			
-			/*//logoutForm= driver.findElement(By.cssSelector("#logoutForm"));
+			//logoutForm= driver.findElement(By.cssSelector("#logoutForm"));
 			logoutForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutForm")));	
 			
 			Assert.assertTrue(logoutForm.isDisplayed(), "[!] Vartotojas neprisijunge.");
 			System.out.println("- Vartotojas prisijunge.");
 			
 			//driver.findElement(By.cssSelector("#logoutForm")).submit();
-			logoutForm.submit();*/
+			logoutForm.submit();
 		
 		} else {
 			
@@ -100,26 +101,32 @@ public class testRegister {
 			
 			System.out.println("- Gauti pranesimai: " + mess + " | " + mess2 + " | " + mess3);
 
-			/*
+			
 			if (username.isEmpty()) {
-				Assert.assertEquals(mess, message[0], "[!] Pranesimai nesutampa.");
+				//Assert.assertEquals(mess, message[0], "[!] Pranesimai nesutampa.");
+				System.out.println("- Prisijungimo vardas tuscias.");
 			} else if (username.length()<3 && username.length()>33) {
-				Assert.assertEquals(mess, message[2], "[!] Pranesimai nesutampa.");
+				//Assert.assertEquals(mess, message[2], "[!] Pranesimai nesutampa.");
+				System.out.println("- Prisijungimo vardas netinkamo formato.");
 			} else {
-				Assert.assertEquals(mess, message[5], "[!] Pranesimai nesutampa.");
+				//Assert.assertEquals(mess, message[5], "[!] Pranesimai nesutampa.");
+				System.out.println("- Vartotojas egzistuoja.");
 			}
 			
 			if (password.isEmpty()) {
-				Assert.assertEquals(mess2, message[1], "[!] Pranesimai nesutampa.");
+				//Assert.assertEquals(mess2, message[1], "[!] Pranesimai nesutampa.");
+				System.out.println("- Slaptazodis tuscias.");
 			} else if (password.length()<3) {
-				Assert.assertEquals(mess2, message[3], "[!] Pranesimai nesutampa.");
+				//Assert.assertEquals(mess2, message[3], "[!] Pranesimai nesutampa.");
+				System.out.println("- Slaptazodis per trumpas.");
 			}			
 			
 			if (password != password2) {
 				Assert.assertEquals(mess3, message[4], "[!] Pranesimai nesutampa.");
-			}*/
+				System.out.println("- Slaptazodziai nesutampa.");
+			}
 
-			System.out.println("- Pranesimai sutampa.");
+			
 		
 		}
 		
@@ -129,8 +136,28 @@ public class testRegister {
 	
 	
   @Test
-  public void RegisterEmptyFields() {
-	  register("","","",0);
+  public void RegisterShort() {
+	  register("as","as","as",0);
+  }
+  
+  @Test
+  public void RegisterUserToLong() {
+	  register(randomString+randomString+randomString,randomString,randomString,0);
+  }
+  
+  @Test
+  public void RegisterPassDifferent() {
+	  register(randomString,randomString+randomString,randomString,1);
+  }
+  
+  @Test
+  public void RegisterUserExist() {
+	  register("user",randomString,randomString,1);
+  }
+  
+  @Test
+  public void RegisterOk() {
+	  register(randomString,randomString,randomString,1);
   }
   
   

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/15/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 08 10:32:46 GMT+02:00 2022</td>
+<td>Started on:</td><td>Thu Sep 08 10:54:29 GMT+02:00 2022</td>
 </tr>
-<tr><td>Total time:</td><td>55 seconds (55989 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26571 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.testLogout.LogoutFromEdit()'><b>LogoutFromEdit</b><br>Test class: tests.testLogout</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+<td title='tests.testRegister.RegisterShort()'><b>RegisterShort</b><br>Test class: tests.testRegister</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -92,20 +94,24 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
-	at tests.testLogout.LogoutFromEdit(testLogout.java:86)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1170399398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1170399398'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:87)
+	at tests.testRegister.RegisterShort(testRegister.java:140)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace943337689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace943337689'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -116,10 +122,10 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
-	at tests.testLogout.LogoutFromEdit(testLogout.java:86)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:87)
+	at tests.testRegister.RegisterShort(testRegister.java:140)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -130,39 +136,24 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>10</td>
-<td>tests.testLogout@294425a7</td></tr>
+<td>2</td>
+<td>tests.testRegister@323b36e0</td></tr>
 <tr>
-<td title='tests.testLogout.LogoutFromList()'><b>LogoutFromList</b><br>Test class: tests.testLogout</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+<td title='tests.testLogin.PasswordEmpty()'><b>PasswordEmpty</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=c4fc58ab-248e-4c25-9aac-3c14aba11c19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -170,20 +161,24 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
-	at tests.testLogout.LogoutFromList(testLogout.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1134601005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1134601005'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.PasswordEmpty(testLogin.java:102)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2117569972", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2117569972'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=c4fc58ab-248e-4c25-9aac-3c14aba11c19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -194,10 +189,10 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
-	at tests.testLogout.LogoutFromList(testLogout.java:81)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.PasswordEmpty(testLogin.java:102)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -208,39 +203,163 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>10</td>
-<td>tests.testLogout@294425a7</td></tr>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testLogout.LogoutFromEdit()'><b>LogoutFromEdit</b><br>Test class: tests.testLogout</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ae292cb5e4dd66f20de83b56ad017be, clickElement {id=d84f0798-fdb5-4f52-b2aa-b92969cf84d4}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2ae292cb5e4dd66f20de83b56ad017be)] -&gt; css selector: button[type=submit]]
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogout.logout(testLogout.java:49)
+	at tests.testLogout.LogoutFromEdit(testLogout.java:86)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1680978133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1680978133'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ae292cb5e4dd66f20de83b56ad017be, clickElement {id=d84f0798-fdb5-4f52-b2aa-b92969cf84d4}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2ae292cb5e4dd66f20de83b56ad017be)] -&gt; css selector: button[type=submit]]
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogout.logout(testLogout.java:49)
+	at tests.testLogout.LogoutFromEdit(testLogout.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>tests.testLogout@4f6ee6e4</td></tr>
+<tr>
+<td title='tests.testRegister.RegisterOk()'><b>RegisterOk</b><br>Test class: tests.testRegister</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=105.0.5195.102)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, findElement {using=id, value=logoutForm}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 146ac9053d94313093670069bfe1d953
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at tests.testRegister.register(testRegister.java:77)
+	at tests.testRegister.RegisterOk(testRegister.java:160)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2122037150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2122037150'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=105.0.5195.102)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, findElement {using=id, value=logoutForm}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 146ac9053d94313093670069bfe1d953
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at tests.testRegister.register(testRegister.java:77)
+	at tests.testRegister.RegisterOk(testRegister.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>19</td>
+<td>tests.testRegister@323b36e0</td></tr>
 <tr>
 <td title='tests.testLogout.LogoutFromMain()'><b>LogoutFromMain</b><br>Test class: tests.testLogout</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#logoutForm + a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [2ae292cb5e4dd66f20de83b56ad017be, findElement {using=css selector, value=#logoutForm + a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -248,20 +367,25 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at tests.testLogout.logout(testLogout.java:55)
 	at tests.testLogout.LogoutFromMain(testLogout.java:76)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace942444738", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace942444738'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1341548048", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1341548048'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#logoutForm + a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [2ae292cb5e4dd66f20de83b56ad017be, findElement {using=css selector, value=#logoutForm + a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -272,9 +396,11 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at tests.testLogout.logout(testLogout.java:55)
 	at tests.testLogout.LogoutFromMain(testLogout.java:76)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -286,39 +412,358 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>10</td>
-<td>tests.testLogout@294425a7</td></tr>
+<td>2</td>
+<td>tests.testLogout@4f6ee6e4</td></tr>
+<tr>
+<td title='tests.testLogin.UserNameEmpty()'><b>UserNameEmpty</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=c4fc58ab-248e-4c25-9aac-3c14aba11c19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.UserNameEmpty(testLogin.java:97)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace562191502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace562191502'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=c4fc58ab-248e-4c25-9aac-3c14aba11c19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.UserNameEmpty(testLogin.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testRegister.RegisterUserToLong()'><b>RegisterUserToLong</b><br>Test class: tests.testRegister</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:87)
+	at tests.testRegister.RegisterUserToLong(testRegister.java:145)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1469247135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1469247135'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:87)
+	at tests.testRegister.RegisterUserToLong(testRegister.java:145)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>tests.testRegister@323b36e0</td></tr>
+<tr>
+<td title='tests.testLogin.SqlInjection1()'><b>SqlInjection1</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=b8b0007e-ff70-4d95-b8e1-cd9ec4ae0b4c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.SqlInjection1(testLogin.java:117)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1616147098", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1616147098'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=b8b0007e-ff70-4d95-b8e1-cd9ec4ae0b4c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.SqlInjection1(testLogin.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testLogin.SqlInjection2()'><b>SqlInjection2</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=b8b0007e-ff70-4d95-b8e1-cd9ec4ae0b4c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.SqlInjection2(testLogin.java:122)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace124101899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace124101899'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, clickElement {id=b8b0007e-ff70-4d95-b8e1-cd9ec4ae0b4c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; css selector: button[type=submit]]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogin.login(testLogin.java:61)
+	at tests.testLogin.SqlInjection2(testLogin.java:122)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testLogout.LogoutFromList()'><b>LogoutFromList</b><br>Test class: tests.testLogout</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ae292cb5e4dd66f20de83b56ad017be, clickElement {id=d84f0798-fdb5-4f52-b2aa-b92969cf84d4}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2ae292cb5e4dd66f20de83b56ad017be)] -&gt; css selector: button[type=submit]]
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogout.logout(testLogout.java:49)
+	at tests.testLogout.LogoutFromList(testLogout.java:81)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1978317176", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1978317176'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ae292cb5e4dd66f20de83b56ad017be, clickElement {id=d84f0798-fdb5-4f52-b2aa-b92969cf84d4}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2ae292cb5e4dd66f20de83b56ad017be)] -&gt; css selector: button[type=submit]]
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testLogout.logout(testLogout.java:49)
+	at tests.testLogout.LogoutFromList(testLogout.java:81)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>tests.testLogout@4f6ee6e4</td></tr>
 <tr>
 <td title='tests.testLogout.LogoutFromView()'><b>LogoutFromView</b><br>Test class: tests.testLogout</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#logoutForm + a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [2ae292cb5e4dd66f20de83b56ad017be, findElement {using=css selector, value=#logoutForm + a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -326,20 +771,25 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at tests.testLogout.logout(testLogout.java:55)
 	at tests.testLogout.LogoutFromView(testLogout.java:91)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace639769517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace639769517'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace644180849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace644180849'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#logoutForm + a&quot;}
   (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d5e74c43a248b8cdd713bb4b9070f9e, get {url=http://localhost:8080/prisijungti?logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
+Command: [2ae292cb5e4dd66f20de83b56ad017be, findElement {using=css selector, value=#logoutForm + a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63930}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63930/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ae292cb5e4dd66f20de83b56ad017be
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -350,9 +800,11 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:1031)
-	at tests.testLogout.logout(testLogout.java:41)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at tests.testLogout.logout(testLogout.java:55)
 	at tests.testLogout.LogoutFromView(testLogout.java:91)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -364,29 +816,280 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>10</td>
-<td>tests.testLogout@294425a7</td></tr>
+<td>2</td>
+<td>tests.testLogout@4f6ee6e4</td></tr>
+<tr>
+<td title='tests.testLogin.WrongPassword()'><b>WrongPassword</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, sendKeysToElement {id=bae24e01-f026-4442-8d9b-8643e05f88b7, value=[Ljava.lang.CharSequence;@1f5984bb}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; name: password]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+	at tests.testLogin.login(testLogin.java:58)
+	at tests.testLogin.WrongPassword(testLogin.java:107)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2102643110", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2102643110'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, sendKeysToElement {id=bae24e01-f026-4442-8d9b-8643e05f88b7, value=[Ljava.lang.CharSequence;@1f5984bb}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; name: password]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+	at tests.testLogin.login(testLogin.java:58)
+	at tests.testLogin.WrongPassword(testLogin.java:107)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testRegister.RegisterUserExist()'><b>RegisterUserExist</b><br>Test class: tests.testRegister</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:73)
+	at tests.testRegister.RegisterUserExist(testRegister.java:155)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace329669553", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace329669553'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:73)
+	at tests.testRegister.RegisterUserExist(testRegister.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>tests.testRegister@323b36e0</td></tr>
+<tr>
+<td title='tests.testLogin.WrongFormat()'><b>WrongFormat</b><br>Test class: tests.testLogin</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, sendKeysToElement {id=421e7979-a045-4f4a-9d08-af7a018dd71d, value=[Ljava.lang.CharSequence;@29ca52da}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; name: username]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+	at tests.testLogin.login(testLogin.java:55)
+	at tests.testLogin.WrongFormat(testLogin.java:127)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace300458591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace300458591'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8d79aaa58e7e5822c1173ca2d280033, sendKeysToElement {id=421e7979-a045-4f4a-9d08-af7a018dd71d, value=[Ljava.lang.CharSequence;@29ca52da}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63909/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (e8d79aaa58e7e5822c1173ca2d280033)] -&gt; name: username]
+Session ID: e8d79aaa58e7e5822c1173ca2d280033
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+	at tests.testLogin.login(testLogin.java:55)
+	at tests.testLogin.WrongFormat(testLogin.java:127)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testRegister.RegisterPassDifferent()'><b>RegisterPassDifferent</b><br>Test class: tests.testRegister</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:73)
+	at tests.testRegister.RegisterPassDifferent(testRegister.java:150)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1426111096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1426111096'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=105.0.5195.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [146ac9053d94313093670069bfe1d953, clickElement {id=01759863-81f0-4b05-a397-68dcfaf5e92f}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63945}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63945/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (146ac9053d94313093670069bfe1d953)] -&gt; css selector: button[type=submit]]
+Session ID: 146ac9053d94313093670069bfe1d953
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at tests.testRegister.register(testRegister.java:73)
+	at tests.testRegister.RegisterPassDifferent(testRegister.java:150)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>2</td>
+<td>tests.testRegister@323b36e0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -397,50 +1100,20 @@ Session ID: 2d5e74c43a248b8cdd713bb4b9070f9e
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.testLogin.CorrectLogin()'><b>CorrectLogin</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.PasswordEmpty()'><b>PasswordEmpty</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.WrongPassword()'><b>WrongPassword</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>1</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.SqlInjection1()'><b>SqlInjection1</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.UserNameEmpty()'><b>UserNameEmpty</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.WrongFormat()'><b>WrongFormat</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
-<td title='tests.testLogin.SqlInjection2()'><b>SqlInjection2</b><br>Test class: tests.testLogin</td>
-<td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
-<tr>
 <td title='tests.testLogin.EmptyFields()'><b>EmptyFields</b><br>Test class: tests.testLogin</td>
 <td></td>
-<td>0</td>
-<td>tests.testLogin@6379eb</td></tr>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
+<tr>
+<td title='tests.testLogin.CorrectLogin()'><b>CorrectLogin</b><br>Test class: tests.testLogin</td>
+<td></td>
+<td>1</td>
+<td>tests.testLogin@1fa268de</td></tr>
 <tr>
 <td title='tests.testLogin.UserNotExist()'><b>UserNotExist</b><br>Test class: tests.testLogin</td>
 <td></td>
 <td>1</td>
-<td>tests.testLogin@6379eb</td></tr>
+<td>tests.testLogin@1fa268de</td></tr>
 </table><p>
 </body>
 </html>

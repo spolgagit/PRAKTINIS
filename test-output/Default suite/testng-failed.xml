@@ -5,9 +5,13 @@
     <classes>
       <class name="tests.testRegister">
         <methods>
+          <include name="RegisterPassDifferent"/>
           <include name="close"/>
           <include name="setup"/>
-          <include name="RegisterEmptyFields"/>
+          <include name="RegisterUserExist"/>
+          <include name="RegisterUserToLong"/>
+          <include name="RegisterShort"/>
+          <include name="RegisterOk"/>
         </methods>
       </class> <!-- tests.testRegister -->
     </classes>

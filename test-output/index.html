@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Olga\AppData\Local\Temp\testng-eclipse-1347077595\testng-customsuite.xml</span>
+                    <span>C:\Users\Olga\AppData\Local\Temp\testng-eclipse-987794334\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">5 methods, 5 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,27 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterEmptyFields">RegisterEmptyFields</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterOk">RegisterOk</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterPassDifferent">RegisterPassDifferent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterShort">RegisterShort</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterUserExist">RegisterUserExist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="tests.testRegister" class="method navigator-link" hash-for-method="RegisterUserToLong">RegisterUserToLong</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,36 +147,203 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="RegisterEmptyFields">
-                  </a> <!-- RegisterEmptyFields -->
-                  <span class="method-name">RegisterEmptyFields</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#passwordConfirm+span&quot;}
-  (Session info: chrome=105.0.5195.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+                  <a name="RegisterOk">
+                  </a> <!-- RegisterOk -->
+                  <span class="method-name">RegisterOk</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e0e4ba4d8eba1cd1d10a34ef596328bb, findElement {using=css selector, value=#passwordConfirm+span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53012}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53012/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e0e4ba4d8eba1cd1d10a34ef596328bb
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at tests.testRegister.register(testRegister.java:93)
-	at tests.testRegister.RegisterEmptyFields(testRegister.java:133)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f9da573a4126f34a2775ce48d54b297
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at tests.testRegister.register(testRegister.java:77)
+	at tests.testRegister.RegisterOk(testRegister.java:160)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterPassDifferent">
+                  </a> <!-- RegisterPassDifferent -->
+                  <span class="method-name">RegisterPassDifferent</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f9da573a4126f34a2775ce48d54b297
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at tests.testRegister.register(testRegister.java:77)
+	at tests.testRegister.RegisterPassDifferent(testRegister.java:150)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterShort">
+                  </a> <!-- RegisterShort -->
+                  <span class="method-name">RegisterShort</span>
+                  <div class="stack-trace">java.lang.AssertionError: [!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at tests.testRegister.register(testRegister.java:112)
+	at tests.testRegister.RegisterShort(testRegister.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterUserExist">
+                  </a> <!-- RegisterUserExist -->
+                  <span class="method-name">RegisterUserExist</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HP&apos;, ip: &apos;172.16.88.183&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f9da573a4126f34a2775ce48d54b297
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at tests.testRegister.register(testRegister.java:77)
+	at tests.testRegister.RegisterUserExist(testRegister.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RegisterUserToLong">
+                  </a> <!-- RegisterUserToLong -->
+                  <span class="method-name">RegisterUserToLong</span>
+                  <div class="stack-trace">java.lang.AssertionError: [!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at tests.testRegister.register(testRegister.java:112)
+	at tests.testRegister.RegisterUserToLong(testRegister.java:145)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,7 +381,7 @@ Session ID: e0e4ba4d8eba1cd1d10a34ef596328bb
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Olga\AppData\Local\Temp\testng-eclipse-1347077595\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Olga\AppData\Local\Temp\testng-eclipse-987794334\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -243,16 +430,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'RegisterEmptyFields')
+data.setCell(0, 1, 'RegisterPassDifferent')
 data.setCell(0, 2, 'tests.testRegister')
-data.setCell(0, 3, 687);
+data.setCell(0, 3, 11103);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'RegisterOk')
+data.setCell(1, 2, 'tests.testRegister')
+data.setCell(1, 3, 10708);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'RegisterUserExist')
+data.setCell(2, 2, 'tests.testRegister')
+data.setCell(2, 3, 10485);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'RegisterUserToLong')
+data.setCell(3, 2, 'tests.testRegister')
+data.setCell(3, 3, 825);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'RegisterShort')
+data.setCell(4, 2, 'tests.testRegister')
+data.setCell(4, 3, 480);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 687 ms</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -286,12 +489,36 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">RegisterEmptyFields</span>
-                <span class="method-start">3207 ms</span>
+                <span class="method-name">RegisterOk</span>
+                <span class="method-start">3228 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RegisterPassDifferent</span>
+                <span class="method-start">13960 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RegisterShort</span>
+                <span class="method-start">25066 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RegisterUserExist</span>
+                <span class="method-start">25551 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RegisterUserToLong</span>
+                <span class="method-start">36038 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">close</span>
-                <span class="method-start">3940 ms</span>
+                <span class="method-start">36871 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
