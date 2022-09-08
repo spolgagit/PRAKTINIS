@@ -5,17 +5,30 @@
 		<classes>
 			<class name="tests.testRegister">
 				<methods>
+				<include name="EmptyFields"></include>
 				</methods>
 			</class>
 			<class name="tests.testLogin">
 				<methods>
+					<include name="EmptyFields"></include>
+					<include name="UserNameEmpty"></include>
+					<include name="PasswordEmpty"></include>
+					<include name="WrongPassword"></include>
+					<include name="UserNotExist"></include>
+					<include name="SqlInjection1"></include>
+					<include name="SqlInjection2"></include>
+					<include name="WrongFormat"></include>
+					<include name="CorrectLogin"></include>
 				</methods>
 			</class>
 			<class name="tests.testLogout">
 				<methods>
+					<include name="LogoutFromMain"></include>
+					<include name="LogoutFromList"></include>
+					<include name="LogoutFromEdit"></include>
+					<include name="LogoutFromView"></include>
 				</methods>
 			</class>			
 		</classes>
 	</test>
 </suite>
-
