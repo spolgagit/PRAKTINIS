@@ -9,9 +9,6 @@
           <include name="close"/>
           <include name="setup"/>
           <include name="RegisterUserExist"/>
-          <include name="RegisterUserToLong"/>
-          <include name="RegisterShort"/>
-          <include name="RegisterOk"/>
         </methods>
       </class> <!-- tests.testRegister -->
     </classes>

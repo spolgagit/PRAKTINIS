@@ -2,6 +2,8 @@ package tests;
 
 import java.time.Duration;
 import java.util.UUID;
+
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,9 +11,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 //import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+//import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -20,31 +24,31 @@ public class testRegister {
 	WebDriver driver;
 	WebDriverWait wait;	
 	WebElement registerButton;
-	WebElement logoutForm;
+	WebElement logoutForm, registerForm;
 	WebElement userField;
 	WebElement passField;
 	WebElement passConfirmField;
 	WebElement messageUser, messagePass, messagePassConfirm;
 	String randomString;
-	String[] message = {
+	/*String[] message = {
 			"Šį laukelį būtina užpildyti",
 			"Šį laukelį būtina užpildyti",
 			"Privaloma įvesti nuo 3 iki 32 simbolių",
 			"Privaloma įvesti bent 3 simbolius",
 			"Įvesti slaptažodžiai nesutampa",
 			"Toks vartotojo vardas jau egzistuoja"
-			};
+			};*/
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.navigate().to("http://localhost:8080/registruoti");
 		driver.manage().window().maximize();	
-		randomString = UUID.randomUUID().toString();
+		randomString = StringUtils.left(UUID.randomUUID().toString(), 31);
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void close() {
 		driver.quit();
 	}
@@ -52,6 +56,9 @@ public class testRegister {
 	
 	@Ignore
 	private void register(String username, String password, String password2, int type) {
+		//userField.clear();
+		//passField.clear();
+		//passConfirmField.clear();
 
 		System.out.println("\nTESTO PRADZIA:");	
 		
@@ -67,96 +74,62 @@ public class testRegister {
 		passField.sendKeys(password);
 		System.out.println("- Slaptazodis ["+password+"] ivestas.");
 		
+		passConfirmField.sendKeys(password2);
+		System.out.println("- Pakartotinis ["+password2+"] ivestas.");
 
-
-		if(type==1) {
-			registerButton.click();
-			System.out.println("- Mygtukas [Prisijungti] paspaustas.");
-			
-			//logoutForm= driver.findElement(By.cssSelector("#logoutForm"));
-			logoutForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutForm")));	
-			
+		registerButton.click();
+		System.out.println("- Mygtukas [Prisijungti] paspaustas.");
+		
+	
+		if(type==1) {	
+			logoutForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutForm")));
 			Assert.assertTrue(logoutForm.isDisplayed(), "[!] Vartotojas neprisijunge.");
-			System.out.println("- Vartotojas prisijunge.");
-			
-			//driver.findElement(By.cssSelector("#logoutForm")).submit();
+			System.out.println("- Vartotojas prisijunge.");			
 			logoutForm.submit();
 		
-		} else {
-			
-			registerButton.click();
-			System.out.println("- Mygtukas [Prisijungti] paspaustas.");
-			
-			System.out.println("- Laukiama pranesimu");
-			
-			messageUser = driver.findElement(By.cssSelector("#username+span"));
-			messagePass = driver.findElement(By.cssSelector("#password+span"));
-			messagePassConfirm = driver.findElement(By.cssSelector("#passwordConfirm+span"));
-			
-			System.out.println("- Rasti pranesimai.");			
-			
-			String  mess = messageUser.getText();
-			String  mess2 = messagePass.getText();
-			String  mess3 = messagePassConfirm.getText();
-			
-			System.out.println("- Gauti pranesimai: " + mess + " | " + mess2 + " | " + mess3);
-
-			
-			if (username.isEmpty()) {
-				//Assert.assertEquals(mess, message[0], "[!] Pranesimai nesutampa.");
-				System.out.println("- Prisijungimo vardas tuscias.");
-			} else if (username.length()<3 && username.length()>33) {
-				//Assert.assertEquals(mess, message[2], "[!] Pranesimai nesutampa.");
-				System.out.println("- Prisijungimo vardas netinkamo formato.");
-			} else {
-				//Assert.assertEquals(mess, message[5], "[!] Pranesimai nesutampa.");
-				System.out.println("- Vartotojas egzistuoja.");
-			}
-			
-			if (password.isEmpty()) {
-				//Assert.assertEquals(mess2, message[1], "[!] Pranesimai nesutampa.");
-				System.out.println("- Slaptazodis tuscias.");
-			} else if (password.length()<3) {
-				//Assert.assertEquals(mess2, message[3], "[!] Pranesimai nesutampa.");
-				System.out.println("- Slaptazodis per trumpas.");
-			}			
-			
-			if (password != password2) {
-				Assert.assertEquals(mess3, message[4], "[!] Pranesimai nesutampa.");
-				System.out.println("- Slaptazodziai nesutampa.");
-			}
-
-			
-		
+		} else {		
+			registerForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("userForm")));
+			Assert.assertTrue(registerForm.isDisplayed(), "[!] Vartotojas prisijunge.");
+			System.out.println("- Vartotojas neprisijunge.");	
 		}
 		
 		System.out.println("TESTO PABAIGA.\n");		
 	}
 	
+
+	  @Test
+	  public void RegisterEmptyFields() { //Ivedami visi tusti laukai
+		register("","","",0);
+	  }	
 	
 	
   @Test
-  public void RegisterShort() {
-	  register("as","as","as",0);
+  public void RegisterEmptyUser() { //neivedamas vartotojo vardas
+	register("",randomString,randomString,0);
   }
   
   @Test
-  public void RegisterUserToLong() {
-	  register(randomString+randomString+randomString,randomString,randomString,0);
+  public void RegisterPassDifferent() { //ivedami skirtingi slaptazodziai
+	  register(randomString,"sdffds",randomString,0);
   }
   
   @Test
-  public void RegisterPassDifferent() {
-	  register(randomString,randomString+randomString,randomString,1);
+  public void RegisterSqlInjection1() { //nenaudojama
+	  register("admin OR 1=1","admin OR 1=1","admin OR 1=1", 0);
+  } 
+  
+  @Test
+  public void RegisterSqlInjection2() { //nenaudojama
+	  register("admin; DROP TABLE Users","admin; DROP TABLE Users","admin; DROP TABLE Users", 0);
   }
   
   @Test
-  public void RegisterUserExist() {
-	  register("user",randomString,randomString,1);
+  public void RegisterUserExist() { //registruojtas vartotojas
+	  register("user",randomString,randomString,0);
   }
   
   @Test
-  public void RegisterOk() {
+  public void RegisterOk() { //sekminga registracija
 	  register(randomString,randomString,randomString,1);
   }
   

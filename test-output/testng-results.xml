@@ -1,282 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+<testng-results ignored="5" total="20" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-08T10:55:21 GMT+02:00" name="Default suite" finished-at="2022-09-08T10:55:58 GMT+02:00" duration-ms="37068">
+  <suite started-at="2022-09-08T13:05:39 GMT+02:00" name="SmokeTests" finished-at="2022-09-08T13:06:18 GMT+02:00" duration-ms="39373">
     <groups>
     </groups>
-    <test started-at="2022-09-08T10:55:21 GMT+02:00" name="Default test" finished-at="2022-09-08T10:55:58 GMT+02:00" duration-ms="37068">
-      <class name="tests.testRegister">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:21 GMT+02:00" name="setup" finished-at="2022-09-08T10:55:24 GMT+02:00" duration-ms="3164" status="PASS">
+    <test started-at="2022-09-08T13:05:39 GMT+02:00" name="Test" finished-at="2022-09-08T13:06:18 GMT+02:00" duration-ms="39373">
+      <class name="tests.testLogout">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:08 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:09 GMT+02:00" duration-ms="952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="RegisterOk()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:24 GMT+02:00" name="RegisterOk" finished-at="2022-09-08T10:55:35 GMT+02:00" duration-ms="10708" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at tests.testRegister.register(testRegister.java:77)
-at tests.testRegister.RegisterOk(testRegister.java:160)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="LogoutFromMain()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:09 GMT+02:00" name="LogoutFromMain" finished-at="2022-09-08T13:06:10 GMT+02:00" duration-ms="1339" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterOk -->
-        <test-method signature="RegisterPassDifferent()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:35 GMT+02:00" name="RegisterPassDifferent" finished-at="2022-09-08T10:55:46 GMT+02:00" duration-ms="11103" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at tests.testRegister.register(testRegister.java:77)
-at tests.testRegister.RegisterPassDifferent(testRegister.java:150)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- LogoutFromMain -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:10 GMT+02:00" name="close" finished-at="2022-09-08T13:06:10 GMT+02:00" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:10 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:11 GMT+02:00" duration-ms="859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LogoutFromList()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:11 GMT+02:00" name="LogoutFromList" finished-at="2022-09-08T13:06:13 GMT+02:00" duration-ms="1500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutFromList -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:13 GMT+02:00" name="close" finished-at="2022-09-08T13:06:13 GMT+02:00" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:13 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:14 GMT+02:00" duration-ms="901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LogoutFromEdit()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:14 GMT+02:00" name="LogoutFromEdit" finished-at="2022-09-08T13:06:15 GMT+02:00" duration-ms="1406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutFromEdit -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:15 GMT+02:00" name="close" finished-at="2022-09-08T13:06:15 GMT+02:00" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:15 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:16 GMT+02:00" duration-ms="864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LogoutFromView()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:16 GMT+02:00" name="LogoutFromView" finished-at="2022-09-08T13:06:18 GMT+02:00" duration-ms="1553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutFromView -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogout@7db12bb6]" started-at="2022-09-08T13:06:18 GMT+02:00" name="close" finished-at="2022-09-08T13:06:18 GMT+02:00" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- tests.testLogout -->
+      <class name="tests.testLogin">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:51 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:52 GMT+02:00" duration-ms="1454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="EmptyFields()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:52 GMT+02:00" name="EmptyFields" finished-at="2022-09-08T13:05:53 GMT+02:00" duration-ms="587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyFields -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:53 GMT+02:00" name="close" finished-at="2022-09-08T13:05:53 GMT+02:00" duration-ms="355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:53 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:55 GMT+02:00" duration-ms="1531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="UserNameEmpty()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:55 GMT+02:00" name="UserNameEmpty" finished-at="2022-09-08T13:05:55 GMT+02:00" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserNameEmpty -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:55 GMT+02:00" name="close" finished-at="2022-09-08T13:05:56 GMT+02:00" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:56 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:57 GMT+02:00" duration-ms="1488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="PasswordEmpty()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:57 GMT+02:00" name="PasswordEmpty" finished-at="2022-09-08T13:05:58 GMT+02:00" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordEmpty -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:58 GMT+02:00" name="close" finished-at="2022-09-08T13:05:58 GMT+02:00" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:58 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:59 GMT+02:00" duration-ms="1382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="WrongPassword()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:05:59 GMT+02:00" name="WrongPassword" finished-at="2022-09-08T13:06:00 GMT+02:00" duration-ms="674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WrongPassword -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:00 GMT+02:00" name="close" finished-at="2022-09-08T13:06:00 GMT+02:00" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:00 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:02 GMT+02:00" duration-ms="1469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="UserNotExist()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:02 GMT+02:00" name="UserNotExist" finished-at="2022-09-08T13:06:03 GMT+02:00" duration-ms="756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserNotExist -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:03 GMT+02:00" name="close" finished-at="2022-09-08T13:06:03 GMT+02:00" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:03 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:04 GMT+02:00" duration-ms="1441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="WrongFormat()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:04 GMT+02:00" name="WrongFormat" finished-at="2022-09-08T13:06:05 GMT+02:00" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WrongFormat -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:05 GMT+02:00" name="close" finished-at="2022-09-08T13:06:05 GMT+02:00" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:05 GMT+02:00" name="setup" finished-at="2022-09-08T13:06:07 GMT+02:00" duration-ms="1545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CorrectLogin()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:07 GMT+02:00" name="CorrectLogin" finished-at="2022-09-08T13:06:07 GMT+02:00" duration-ms="690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CorrectLogin -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testLogin@273e7444]" started-at="2022-09-08T13:06:07 GMT+02:00" name="close" finished-at="2022-09-08T13:06:08 GMT+02:00" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- tests.testLogin -->
+      <class name="tests.testRegister">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:39 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:42 GMT+02:00" duration-ms="3125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RegisterEmptyUser()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:42 GMT+02:00" name="RegisterEmptyUser" finished-at="2022-09-08T13:05:43 GMT+02:00" duration-ms="771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterEmptyUser -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:43 GMT+02:00" name="close" finished-at="2022-09-08T13:05:43 GMT+02:00" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:43 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:44 GMT+02:00" duration-ms="1468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RegisterPassDifferent()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:44 GMT+02:00" name="RegisterPassDifferent" finished-at="2022-09-08T13:05:45 GMT+02:00" duration-ms="746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisterPassDifferent -->
-        <test-method signature="RegisterShort()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:46 GMT+02:00" name="RegisterShort" finished-at="2022-09-08T10:55:47 GMT+02:00" duration-ms="480" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[[!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: [!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at tests.testRegister.register(testRegister.java:112)
-at tests.testRegister.RegisterShort(testRegister.java:140)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:45 GMT+02:00" name="close" finished-at="2022-09-08T13:05:45 GMT+02:00" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterShort -->
-        <test-method signature="RegisterUserExist()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:47 GMT+02:00" name="RegisterUserExist" finished-at="2022-09-08T10:55:57 GMT+02:00" duration-ms="10485" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logoutForm (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'HP', ip: '172.16.88.183', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Olga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64000/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 6f9da573a4126f34a2775ce48d54b297
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at tests.testRegister.register(testRegister.java:77)
-at tests.testRegister.RegisterUserExist(testRegister.java:155)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:45 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:47 GMT+02:00" duration-ms="1507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RegisterUserExist()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:47 GMT+02:00" name="RegisterUserExist" finished-at="2022-09-08T13:05:48 GMT+02:00" duration-ms="699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegisterUserExist -->
-        <test-method signature="RegisterUserToLong()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:57 GMT+02:00" name="RegisterUserToLong" finished-at="2022-09-08T10:55:58 GMT+02:00" duration-ms="825" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[[!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: [!] Pranesimai nesutampa. expected [Toks vartotojo vardas jau egzistuoja] but found [Privaloma įvesti nuo 3 iki 32 simbolių]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at tests.testRegister.register(testRegister.java:112)
-at tests.testRegister.RegisterUserToLong(testRegister.java:145)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:48 GMT+02:00" name="close" finished-at="2022-09-08T13:05:48 GMT+02:00" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RegisterUserToLong -->
-        <test-method is-config="true" signature="close()[pri:0, instance:tests.testRegister@67f639d3]" started-at="2022-09-08T10:55:58 GMT+02:00" name="close" finished-at="2022-09-08T10:55:58 GMT+02:00" duration-ms="190" status="PASS">
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:48 GMT+02:00" name="setup" finished-at="2022-09-08T13:05:49 GMT+02:00" duration-ms="1430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RegisterOk()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:49 GMT+02:00" name="RegisterOk" finished-at="2022-09-08T13:05:51 GMT+02:00" duration-ms="1127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterOk -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.testRegister@485966cc]" started-at="2022-09-08T13:05:51 GMT+02:00" name="close" finished-at="2022-09-08T13:05:51 GMT+02:00" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- tests.testRegister -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- SmokeTests -->
 </testng-results>

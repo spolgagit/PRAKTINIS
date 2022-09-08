@@ -7,31 +7,20 @@
         <methods>
           <include name="LogoutFromList"/>
           <include name="close"/>
+          <include name="LogoutFromEdit"/>
           <include name="setup"/>
           <include name="LogoutFromView"/>
-          <include name="LogoutFromMain"/>
-          <include name="LogoutFromEdit"/>
         </methods>
       </class> <!-- tests.testLogout -->
-      <class name="tests.testRegister">
-        <methods>
-          <include name="RegisterPassDifferent"/>
-          <include name="close"/>
-          <include name="setup"/>
-          <include name="RegisterUserExist"/>
-          <include name="RegisterUserToLong"/>
-          <include name="RegisterShort"/>
-          <include name="RegisterOk"/>
-        </methods>
-      </class> <!-- tests.testRegister -->
       <class name="tests.testLogin">
         <methods>
           <include name="setup"/>
           <include name="close"/>
           <include name="UserNameEmpty"/>
-          <include name="WrongPassword"/>
+          <include name="EmptyFields"/>
+          <include name="UserNotExist"/>
           <include name="WrongFormat"/>
-          <include name="SqlInjection2"/>
+          <include name="CorrectLogin"/>
           <include name="SqlInjection1"/>
           <include name="PasswordEmpty"/>
         </methods>

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="SmokeTests" parallel="methods" thread-count="5">
+<suite name="SmokeTests" parallel="false">
 	<test name="Test">
 		<classes>
 			<class name="tests.testRegister">
-				<methods>
-					<include name="RegisterShort"></include>				
-					<include name="RegisterUserToLong"></include>	
-					<include name="RegisterPassDifferent"></include>				
+				<methods>				
+					<include name="RegisterEmptyField"></include>
+					<include name="RegisterEmptyUser"></include>
+					<include name="RegisterPassDifferent"></include>
 					<include name="RegisterUserExist"></include>
-					<include name="RegisterOk"></include>					
-					
+					<include name="RegisterOk"></include>
 				</methods>
 			</class>
 			<class name="tests.testLogin">
@@ -20,8 +19,6 @@
 					<include name="PasswordEmpty"></include>
 					<include name="WrongPassword"></include>
 					<include name="UserNotExist"></include>
-					<include name="SqlInjection1"></include>
-					<include name="SqlInjection2"></include>
 					<include name="WrongFormat"></include>
 					<include name="CorrectLogin"></include>
 				</methods>

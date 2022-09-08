@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -26,7 +26,7 @@ public class testLogin {
 	WebElement messageSpan;
 	String message, randomString;
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -35,7 +35,7 @@ public class testLogin {
 		randomString = UUID.randomUUID().toString();	
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void close() {
 		driver.quit();
 	}
@@ -45,11 +45,8 @@ public class testLogin {
 
 		System.out.println("\nTESTO PRADZIA:");	
 		
-		//userField = driver.findElement(By.name("username"));
 		userField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
-		//passField = driver.findElement(By.name("password"));	
 		passField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));		
-		//loginButton = driver.findElement(By.cssSelector("button[type=submit]"));
 		loginButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type=submit]")));
 		
 		userField.sendKeys(username);
@@ -61,18 +58,16 @@ public class testLogin {
 		loginButton.click();
 		System.out.println("- Mygtukas [Prisijungti] paspaustas.");
 
-		if(type==1) {			
-			//logoutForm= driver.findElement(By.cssSelector("#logoutForm"));
+		if(type==1) {//teisingam prisijungimui		
 			logoutForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("logoutForm")));	
 			
 			Assert.assertTrue(logoutForm.isDisplayed(), "[!] Vartotojas neprisijunge.");
 			System.out.println("- Vartotojas prisijunge.");
 			
-			//driver.findElement(By.cssSelector("#logoutForm")).submit();
 			logoutForm.submit();
-		}
-		else {
-			//messageSpan = driver.findElement(By.xpath("/html/body/div/form/div/span[2]"));
+			
+		} else { //klaidingam prisijungimui
+
 			messageSpan = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/form/div/span[2]")));
 			
 			String  mess = messageSpan.getText();
@@ -88,47 +83,48 @@ public class testLogin {
 	
 	
   @Test
-  public void EmptyFields() {
+  public void EmptyFields() { //Ivedai tusti prisijungimo laukai
 	  login("","", 0);
   }
   
   @Test
-  public void UserNameEmpty() {
+  public void UserNameEmpty() { //Paliekamas prisijungimo vardas tuscias
 	  login("",randomString, 0);
   }
   
   @Test
-  public void PasswordEmpty() {
+  public void PasswordEmpty() { //Paliekamas slaptazodis tuscias
 	  login(randomString,"", 0);
   }
   
   @Test
-  public void WrongPassword() {
+  public void WrongPassword() { //Ivedamas klaidingas slaptazodis (egzistuojancio vartotojo)
 	  login("user",randomString, 0);
   }
   
   @Test
-  public void UserNotExist() {
+  public void UserNotExist() { //Ivedami neegzistuojancio vartotojo duomenys
 	  login(randomString,randomString, 0);
   } 
   
+  
   @Test
-  public void SqlInjection1() {
+  public void SqlInjection1() { //Nenaudojama 
 	  login("admin OR 1=1","admin OR 1=1", 0);
   } 
   
   @Test
-  public void SqlInjection2() {
+  public void SqlInjection2() { //Nenaudojama
 	  login("admin; DROP TABLE Users","admin; DROP TABLE Users", 0);
-  } 
+  }
   
   @Test
-  public void WrongFormat() {
+  public void WrongFormat() { //Ivedami blogi simboliai
 	  login("-*//*\";'''{}","-*//*\\\";'''{}", 0);
   } 	
   
   @Test
-  public void CorrectLogin() {
+  public void CorrectLogin() { //Ivedami teisingi duomenys
 	  login("user","user",1);
   } 
 		  

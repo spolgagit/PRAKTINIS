@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -23,42 +23,39 @@ public class testLogout {
 	String message;
 	String[] testLoginData = { "user", "user" }; 
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
-	@AfterTest
+	@AfterMethod
 	public void close() {
 		driver.quit();
 	}	
 	
 	@Ignore
-	private void logout(String url, String username, String password) {
+	private void logout(String url, String username, String password) { //Pagrindinis metodas.
 		
 		System.out.println("\nTESTO PRADZIA:");	
 		
-		driver.navigate().to("http://localhost:8080/prisijungti?logout");
-		driver.manage().window().maximize();
+		driver.navigate().to("http://localhost:8080/prisijungti?logout"); //atidaromas atsijungimo langas
+		driver.manage().window().maximize();//padidinamas
 	
-		//driver.findElement(By.name("username")).sendKeys("admin");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username"))).sendKeys(username);
-		//driver.findElement(By.name("password")).sendKeys("admin");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password"))).sendKeys(password);
-		//driver.findElement(By.cssSelector("button[type=submit]")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type=submit]"))).click();
 		System.out.println("- Pasiruošimas testui baigtas.");		
 		
-		driver.navigate().to(url);
+		driver.navigate().to(url); //atidaromas langas
 		System.out.println("- Atidarytas ["+url+"] puslapis.");
 
-		logoutForm = driver.findElement(By.cssSelector("#logoutForm + a"));
+		logoutForm = driver.findElement(By.cssSelector("#logoutForm + a")); //tikrinama forma
 		System.out.println("- Vartotojas prisijunges.");
 			
-		logoutForm.click();
+		logoutForm.click(); //paspaudziaa
 		System.out.println("- Atsijungimo nuoroda paspausta.");
 
-		messageSpan = driver.findElement(By.cssSelector(".form-signin span"));
+		messageSpan = driver.findElement(By.cssSelector(".form-signin span")); //tikrinamas pranesimas
 		String  mess = messageSpan.getText();
 		System.out.println("- Gautas pranesimas:" + mess);
 		
@@ -72,22 +69,22 @@ public class testLogout {
 	
 	
   @Test
-  public void LogoutFromMain() {
+  public void LogoutFromMain() { //Atsijungiama is skaiciuokles lango
 	  logout("http://localhost:8080/", testLoginData[0], testLoginData[1]);
   }
   
   @Test
-  public void LogoutFromList() {
+  public void LogoutFromList() { //Atsijungiama is operaciju saraso lango
 	  logout("http://localhost:8080/skaiciai", testLoginData[0], testLoginData[1]);
   }
   
   @Test
-  public void LogoutFromEdit() {
+  public void LogoutFromEdit() { //Atsijungiama is redagavimo saraso
 	  logout("http://localhost:8080/atnaujinti?id=29", testLoginData[0], testLoginData[1]);
   }
   
   @Test
-  public void LogoutFromView() {
+  public void LogoutFromView() { //Atsijungiama is perziuru saraso
 	  logout("http://localhost:8080/rodyti?id=19", testLoginData[0], testLoginData[1]);
   }
 		  
